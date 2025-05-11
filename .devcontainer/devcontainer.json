@@ -3,6 +3,7 @@
   "dockerComposeFile": ["../compose.yml"],
   "service": "web",
   "workspaceFolder": "/myapp",
+  "memoryLimit": "4GB",
   "customizations": {
     "vscode": {
       "settings": {

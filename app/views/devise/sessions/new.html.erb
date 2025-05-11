@@ -1,0 +1,8 @@
+<h2>サインイン</h2>
+
+<%= link_to user_google_oauth2_omniauth_authorize_path,
+    method: :post,
+    class: "btn btn-google",
+    data: { turbo: false } do %>
+  Googleでサインイン
+<% end %>
