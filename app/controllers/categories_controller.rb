@@ -1,5 +1,6 @@
 class CategoriesController < ApplicationController
   def index
-    @categories = curret_user.categories
+    @categories = Category.all
+    binding.pry
   end
 end

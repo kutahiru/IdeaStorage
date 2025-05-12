@@ -17,6 +17,8 @@ ActiveRecord::Schema[7.2].define(version: 2025_05_07_212506) do
   create_table "categories", force: :cascade do |t|
     t.bigint "user_id", null: false
     t.string "title", null: false
+    t.string "body"
+    t.string "status", default: "0"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id", "title"], name: "index_categories_on_user_id_and_title"
@@ -30,8 +32,7 @@ ActiveRecord::Schema[7.2].define(version: 2025_05_07_212506) do
     t.text "body"
     t.string "rank", default: "0"
     t.integer "sort"
-    t.boolean "strikethrough", default: false
-    t.boolean "adoption", default: false
+    t.string "status", default: "0"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["category_id"], name: "index_ideas_on_category_id"

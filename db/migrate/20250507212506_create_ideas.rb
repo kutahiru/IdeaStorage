@@ -7,8 +7,7 @@ class CreateIdeas < ActiveRecord::Migration[7.2]
       t.text :body
       t.string :rank, default: "0"
       t.integer :sort
-      t.boolean :strikethrough, default: false
-      t.boolean :adoption, default: false
+      t.string :status, default: "0"
       t.timestamps
     end
   end
