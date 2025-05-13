@@ -3,8 +3,18 @@
   "configurations": [
     {
       "type": "rdbg",
-      "name": "Attach with rdbg",
-      "request": "attach"
+      "name": "Debug Rails Server",
+      "request": "launch",
+      "command": "bin/rails",
+      "script": "server",
+      "args": ["-b", "0.0.0.0", "-p", "3000"],
+      "askParameters": false
+    },
+    {
+      "type": "rdbg",
+      "name": "Attach to Rails",
+      "request": "attach",
+      "debugPort": "0.0.0.0:3333"
     }
   ]
 }

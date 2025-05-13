@@ -58,6 +58,9 @@ end
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem "web-console"
+
+  # Ruby LSP for debugging and code intelligence
+  gem "ruby-lsp", require: false
 end
 
 group :test do

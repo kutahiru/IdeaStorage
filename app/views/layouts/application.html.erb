@@ -1,6 +1,13 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <%# app/views/layouts/application.html.erb %>
+    <% if Rails.env.development? %>
+      <% begin %>
+        <% console %>
+      <% rescue %>
+      <% end %>
+    <% end %>
     <title><%= content_for(:title) || "Myapp" %></title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="apple-mobile-web-app-capable" content="yes">
