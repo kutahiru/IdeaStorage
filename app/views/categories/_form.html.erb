@@ -1,0 +1,19 @@
+<%= form_with model: @category do |form| %>
+  <div class="space-y-6 mt-4">
+    <div class="md:w-3/5">
+      <label class="text-gray-700" for="title">Title</label>
+      <%= form.text_field :title, class: "block w-full py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring" %>
+    </div>
+    <div class="md:w-3/5">
+      <label class="text-gray-700" for="body">Body</label>
+      <%= form.text_area :body, class: "block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md  focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring" %>
+    </div>
+    <div class="md:w-3/5">
+      <label class="text-gray-700" for="status">Status</label>
+      <%= form.select :status, options_for_select([['Draft', 'draft'], ['Published', 'published']]), {}, { class: "block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring" } %>
+    </div>
+  </div>
+  <div class="flex justify-start mt-6">
+    <%= form.submit 'Save', class: "px-8 py-2.5 leading-5 text-white transition-colors duration-300 transform bg-gray-700 rounded-md hover:bg-gray-600 focus:outline-none focus:bg-gray-600" %>
+  </div>
+<% end %>
