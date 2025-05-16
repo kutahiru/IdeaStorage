@@ -21,7 +21,8 @@
         "ionutvmi.path-autocomplete",
         "humao.rest-client",
         "bradlc.vscode-tailwindcss",
-        "shardulm94.trailing-spaces"
+        "shardulm94.trailing-spaces",
+        "spmeesseman.vscode-taskexplorer"
       ]
     }
   }

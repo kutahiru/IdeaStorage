@@ -1,0 +1,6 @@
+ja:
+  enums:
+    category:
+      status:  # enum名
+        normal: "通常"
+        disabled: "無効"
