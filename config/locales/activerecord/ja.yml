@@ -1,6 +1,15 @@
 ja:
   enums:
     category:
-      status:  # enum名
+      status:
         normal: "通常"
         disabled: "無効"
+    idea:
+      rank:
+        low: "低"
+        medium: "中"
+        high: "高"
+      status:
+        normal: "通常"
+        disabled: "無効"
+        adopted: "採用"
