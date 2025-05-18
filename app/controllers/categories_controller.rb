@@ -1,4 +1,6 @@
 class CategoriesController < ApplicationController
+  before_action :authorize_category_edit, only: %i[edit update destroy]
+
   def index
     @q = current_user.categories.ransack(params[:q])
     @categories = if @q.present?
@@ -23,7 +25,7 @@ class CategoriesController < ApplicationController
   end
 
   def edit
-    @category = Category.find(params[:id])
+    @category = current_user.categories.find(params[:id])
   end
 
   def update
@@ -54,5 +56,13 @@ class CategoriesController < ApplicationController
 
   def category_update_params
     params.require(:category).permit(:title, :body, :update)
+  end
+
+  def authorize_category_edit
+    @category = Category.find_by(id: params[:id])
+    if @category.nil? || @category.user_id != current_user.id
+      flash[:error] = "このカテゴリを編集する権限がありません"
+      redirect_to categories_path
+    end
   end
 end

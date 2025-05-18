@@ -1,4 +1,4 @@
-<div class="container mx-auto px-4">
+<div class="container mx-auto px-4 py-2">
   <% flash.each do |message_type, message| %>
     <% if message_type == "success" %>
       <div class="flex w-full max-w-sm overflow-hidden bg-white rounded-lg shadow-md">
@@ -15,7 +15,7 @@
           </div>
         </div>
       </div>
-    <% elsif message_type == "error" %>
+    <% elsif message_type == "error" || message_type == "alert" %>
       <div class="flex w-full max-w-sm overflow-hidden bg-white rounded-lg shadow-md">
         <div class="flex items-center justify-center w-12 bg-red-500">
           <svg class="w-6 h-6 text-white fill-current" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
@@ -30,7 +30,7 @@
           </div>
         </div>
       </div>
-    <% elsif message_type == "info" %>
+    <% elsif message_type == "info" || message_type == "notice" %>
       <div class="flex w-full max-w-sm overflow-hidden bg-white rounded-lg shadow-md">
         <div class="flex items-center justify-center w-12 bg-blue-500">
           <svg class="w-6 h-6 text-white fill-current" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">

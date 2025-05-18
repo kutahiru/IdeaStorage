@@ -8,6 +8,9 @@ Rails.application.routes.draw do
 
   get "/users/auth/failure", to: "users/omniauth_callbacks#failure"
 
+  devise_scope :user do
+    delete "logout", to: "users/sessions#destroy", as: :logout
+  end
 
   resources :categories do
     resources :ideas, shallow: true

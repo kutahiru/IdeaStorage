@@ -1,4 +1,5 @@
 class IdeasController < ApplicationController
+  before_action :authorize_idea_edit, only: %i[edit update destroy]
   def index
     @q = current_user.category_ideas(params[:category_id]).ransack(params[:q])
     @ideas = if @q.present?
@@ -9,12 +10,12 @@ class IdeasController < ApplicationController
   end
 
   def new
-    @category = Category.find(params[:category_id])
+    @category = current_user.categories.find(params[:category_id])
     @idea = @category.ideas.build
   end
 
   def create
-    @category = Category.find(params[:category_id])
+    @category = current_user.categories.find(params[:category_id])
     @idea = @category.ideas.build(idea_params)
     @idea.idea_kbn = "0"
     @idea.sort = 0
@@ -60,5 +61,13 @@ class IdeasController < ApplicationController
 
   def idea_update_params
     params.require(:idea).permit(:title, :body, :rank, :status)
+  end
+
+  def authorize_idea_edit
+    @idea = Idea.find_by(id: params[:id])
+    if @idea.nil? || @idea.category.user_id != current_user.id
+      flash[:error] = "このアイデアを編集する権限がありません"
+      redirect_to categories_path
+    end
   end
 end
