@@ -1,4 +1,38 @@
 ja:
+  activerecord:
+    models:
+      user: "ユーザー"
+      category: "カテゴリー"
+      idea: "アイデア"
+    attributes:
+      user:
+        name: "名前"
+        provider: "プロバイダー"
+        uid: "UID"
+      category:
+        title: "タイトル"
+        body: "内容"
+        status: "ステータス"
+        status/normal: "通常"
+        status/disabled: "無効"
+      idea:
+        title: "タイトル"
+        body: "内容"
+        idea_kbn: "アイデア区分"
+        sort: "並び順"
+        rank: "ランク"
+        rank/low: "低"
+        rank/medium: "中"
+        rank/high: "高"
+        status: "ステータス"
+        status/normal: "通常"
+        status/disabled: "無効"
+        status/adopted: "採用"
+    errors:
+      messages:
+        blank: "入力してください"
+        too_long: "%{count}文字以内で入力してください"
+        not_a_number: "数値で入力してください"
   enums:
     category:
       status:

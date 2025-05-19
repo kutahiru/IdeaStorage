@@ -1,19 +1,22 @@
 <%= form_with model: @category do |form| %>
   <div class="space-y-6 mt-2">
     <div class="md:w-3/5">
-      <label class="text-gray-700" for="title">Title</label>
+      <label class="text-gray-700" for="title"><%= t('categories.form.title') %></label>
       <%= form.text_field :title, class: "block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring" %>
       <p class="text-xs text-red-400">
         <%= @category.errors[:title].join(" ") %>
       </p>
     </div>
     <div class="md:w-3/5">
-      <label class="text-gray-700" for="body">Body</label>
+      <label class="text-gray-700" for="body"><%= t('categories.form.body') %></label>
       <%= form.text_area :body, class: "block w-full px-4 py-2 mt-2 text-gray-700 bg-white border border-gray-200 rounded-md  focus:border-blue-400 focus:ring-blue-300 focus:ring-opacity-40 focus:outline-none focus:ring" %>
+      <p class="text-xs text-red-400">
+        <%= @category.errors[:body].join(" ") %>
+      </p>
     </div>
     <% if @category.persisted? %>
     <div class="md:w-3/5">
-      <label class="text-gray-700" for="status">Status</label>
+      <label class="text-gray-700" for="status"><%= t('categories.form.status') %></label>
       <%= form.select :status,
         Category.statuses_i18n.invert,
         {},
@@ -22,6 +25,6 @@
     <% end %>
   </div>
   <div class="flex justify-start mt-6">
-    <%= form.submit '確定', class: "px-8 py-2.5 leading-5 text-white transition-colors duration-300 transform bg-gray-700 rounded-md hover:bg-gray-600 focus:outline-none focus:bg-gray-600" %>
+    <%= form.submit t('categories.form.submit'), class: "px-8 py-2.5 leading-5 text-white transition-colors duration-300 transform bg-gray-700 rounded-md hover:bg-gray-600 focus:outline-none focus:bg-gray-600" %>
   </div>
 <% end %>

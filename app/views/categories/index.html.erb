@@ -1,17 +1,17 @@
 <section class="container px-4 mx-auto">
-  <h2 class="mt-2 text-lg font-medium text-gray-800">カテゴリ</h2>
+  <h2 class="mt-2 text-lg font-medium text-gray-800"><%= t('categories.index.title') %></h2>
   <div class="flex flex-col mt-2">
-    <div class="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+    <div class="-mx-4 -my-2 sm:-mx-6 lg:-mx-8">
       <div class="inline-block min-w-full py-2 align-middle md:px-6 lg:px-8">
           <%= render 'search_form', q: @q, url: categories_path %>
         <div class="overflow-hidden border border-gray-200">
-          <table class="min-w-full divide-y divide-gray-200 ">
+          <table class="min-w-full divide-y divide-gray-200 table-fixed w-full">
             <colgroup>
-              <col style="width: 3%">
+              <col class="w-16">
               <col style="width: 25%">
               <col style="width: 50%">
               <col style="width: 15%">
-              <col style="width: 7%">
+              <col class="w-24">
             </colgroup>
             <thead class="bg-gray-50">
               <tr>
@@ -20,7 +20,7 @@
                 </th>
                 <th scope="col" class="py-3.5 px-4 text-sm font-normal text-left rtl:text-right text-gray-500">
                   <button class="flex items-center gap-x-3 focus:outline-none">
-                    <span>カテゴリ名</span>
+                    <span><%= t('categories.index.category_name') %></span>
                     <svg class="h-3" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M2.13347 0.0999756H2.98516L5.01902 4.79058H3.86226L3.45549 3.79907H1.63772L1.24366 4.79058H0.0996094L2.13347 0.0999756ZM2.54025 1.46012L1.96822 2.92196H3.11227L2.54025 1.46012Z" fill="currentColor" stroke="currentColor" stroke-width="0.1" />
                       <path d="M0.722656 9.60832L3.09974 6.78633H0.811638V5.87109H4.35819V6.78633L2.01925 9.60832H4.43446V10.5617H0.722656V9.60832Z" fill="currentColor" stroke="currentColor" stroke-width="0.1" />
@@ -29,13 +29,13 @@
                   </button>
                 </th>
                 <th scope="col" class="px-12 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500">
-                  詳細
+                  <%= t('categories.index.details') %>
                 </th>
                 <th scope="col" class="px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500">
-                  ステータス
+                  <%= t('categories.index.status') %>
                 </th>
                 <th scope="col" class="relative py-3.5 px-4">
-                  <span class="sr-only">Edit</span>
+                  <span class="sr-only"><%= t('categories.index.edit') %></span>
                 </th>
               </tr>
             </thead>
@@ -44,7 +44,7 @@
                 <%= render @categories %>
               <% else %>
                 <tr>
-                  <td class="px-4 py-4 text-sm font-medium whitespace-nowrap">カテゴリがありません</td>
+                  <td class="px-4 py-4 text-sm font-medium whitespace-nowrap"><%= t('categories.index.no_categories') %></td>
                   <td></td>
                   <td></td>
                   <td></td>

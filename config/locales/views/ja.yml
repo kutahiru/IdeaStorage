@@ -5,3 +5,85 @@ ja:
         unauthenticated : "ログインが必要です"
     omniauth_callbacks:
       success: "ログインしました"
+  
+  layouts:
+    application:
+      title: "Myapp"
+  
+  shared:
+    header:
+      top: "TOP"
+      categories_index: "カテゴリ一覧"
+      new_category: "カテゴリ作成"
+      logout: "ログアウト"
+      login: "ログイン"
+    flash_message:
+      success: "成功"
+      error: "エラー"
+      info: "情報"
+      warning: "警告"
+  
+  home:
+    top:
+      slogan_1: "思考をカタチに。"
+      slogan_2: "アイデアを価値に。"
+      description: "ひらめいたら、迷わず記録。あとから振り返り、アイデアを成長させよう"
+      idea_visualization: "アイデアの視覚化"
+      manage_ideas: "アイデアを管理する"
+      features_description: "あなたのクリエイティブな思考を整理し、効率的に育てるための3つの機能"
+      new_idea: "新しいアイデア"
+      crystallize_ideas: "閃きを結晶化する"
+      crystallize_description: "あなたの瞬間的なひらめきを逃さず記録し、形にするための機能を提供します"
+      brainstorming: "ブレインストーミング"
+      visualize_thoughts: "思考を視覚的に解放する"
+      visualize_description: "マインドマップやダイアグラムを活用して、複雑な考えを整理します"
+      organized_ideas: "整理されたアイデア"
+      create_margin: "創造の余白を生み出す"
+      create_margin_description: "不要なアイデアを整理し、本当に価値のある思考に集中できる環境を作ります"
+  
+  categories:
+    index:
+      title: "カテゴリ一覧"
+      category_name: "カテゴリ名"
+      details: "詳細"
+      status: "ステータス"
+      edit: "編集"
+      no_categories: "カテゴリがありません"
+    category:
+      confirm_delete: "本当に削除しますか？"
+    search_form:
+      placeholder: "検索"
+    form:
+      title: "タイトル"
+      body: "内容"
+      status: "ステータス"
+      submit: "確定"
+    edit:
+      title: "カテゴリ修正"
+    new:
+      title: "カテゴリ登録"
+  
+  ideas:
+    index:
+      title: "アイデア一覧"
+      create_idea: "アイデア作成"
+      idea_name: "アイデア名"
+      details: "詳細"
+      importance: "重要度"
+      status: "ステータス"
+      edit: "編集"
+      no_ideas: "アイデアがありません"
+    idea:
+      confirm_delete: "本当に削除しますか？"
+    search_form:
+      placeholder: "検索"
+    form:
+      title: "タイトル"
+      body: "内容"
+      rank: "ランク"
+      status: "ステータス"
+      submit: "確定"
+    edit:
+      title: "アイデア修正"
+    new:
+      title: "アイデア登録"

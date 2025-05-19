@@ -1,5 +1,5 @@
 <%= search_form_for q, url: url do |f| %>
-  <div class="w-full md:!w-2/5">
-    <%= f.search_field :title_or_body_cont, placeholder: "Search", class: "block w-full -mt-2.0 mb-2.5 py-1.5 pr-5 text-gray-700 bg-white border border-gray-200 rounded-lg placeholder-gray-400/70 pl-6 focus:border-blue-400 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40"%>
+  <div class="w-full md:!w-1/2">
+    <%= f.search_field :title_or_body_cont, placeholder: t('categories.search_form.placeholder'), class: "block w-full -mt-2.0 mb-2.5 py-1.5 pr-5 text-gray-700 bg-white border border-gray-200 rounded-lg placeholder-gray-400/70 pl-6 focus:border-blue-400 focus:ring-blue-300 focus:outline-none focus:ring focus:ring-opacity-40"%>
   </div>
 <% end %>

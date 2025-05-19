@@ -13,6 +13,8 @@ class Idea < ApplicationRecord
   }
 
   validates :idea_kbn, :title, presence: true
+  validates :title, length: { maximum: 50, message: "50文字以内で入力してください" }
+  validates :body, length: { maximum: 1000, message: "1000文字以内で入力してください" }
   validates :sort, numericality: true
 
   def self.ransackable_attributes(auth_object = nil)

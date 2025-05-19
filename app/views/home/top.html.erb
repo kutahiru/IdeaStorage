@@ -4,12 +4,12 @@
       <div class="max-w-lg mx-auto lg:mx-0">
         <div class="text-center lg:text-left space-y-2">
           <h1 class="text-3xl md:text-4xl font-bold text-gray-800 tracking-tight leading-tight">
-            <span class="mr-10 block">思考をカタチに。</span>
-            <span class="ml-10 block">アイデアを価値に。</span>
+            <span class="mr-10 block"><%= t('home.top.slogan_1') %></span>
+            <span class="ml-10 block"><%= t('home.top.slogan_2') %></span>
           </h1>
 
           <p class="mt-6 text-gray-600 text-lg leading-relaxed">
-            ひらめいたら、迷わず記録。あとから振り返り、アイデアを成長させよう
+            <%= t('home.top.description') %>
           </p>
         </div>
       </div>
@@ -17,7 +17,7 @@
 
     <div class="w-full lg:w-1/2">
       <div class="h-64 md:h-80 lg:h-96 overflow-hidden rounded-xl shadow-lg">
-        <%= image_tag "idea_helo.jpg", alt: "アイデアの視覚化", class: "w-full h-full object-cover transform hover:scale-105 transition duration-500" %>
+        <%= image_tag "idea_helo.jpg", alt: t('home.top.idea_visualization'), class: "w-full h-full object-cover transform hover:scale-105 transition duration-500" %>
       </div>
     </div>
   </div>
@@ -27,7 +27,7 @@
   <div class="container px-4 sm:px-6 mx-auto">
     <div class="text-center mb-12">
       <h2 class="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-800">
-        アイデアを管理する
+        <%= t('home.top.manage_ideas') %>
       </h2>
 
       <div class="flex justify-center mt-4">
@@ -37,7 +37,7 @@
       </div>
 
       <p class="mt-6 max-w-2xl mx-auto text-gray-600 text-lg">
-        あなたのクリエイティブな思考を整理し、効率的に育てるための3つの機能
+        <%= t('home.top.features_description') %>
       </p>
     </div>
 
@@ -45,11 +45,11 @@
       <div class="bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition duration-300 overflow-hidden group">
         <div class="p-6 sm:p-8">
           <div class="mb-5 flex justify-center">
-            <%= image_tag "new_idea.png", alt: "新しいアイデア", class: "h-40 object-contain transform group-hover:scale-105 transition duration-300" %>
+            <%= image_tag "new_idea.png", alt: t('home.top.new_idea'), class: "h-40 object-contain transform group-hover:scale-105 transition duration-300" %>
           </div>
-          <h3 class="text-xl font-semibold text-gray-800 mb-3 text-center">閃きを結晶化する</h3>
+          <h3 class="text-xl font-semibold text-gray-800 mb-3 text-center"><%= t('home.top.crystallize_ideas') %></h3>
           <p class="text-gray-600 leading-relaxed text-center">
-            あなたの瞬間的なひらめきを逃さず記録し、形にするための機能を提供します
+            <%= t('home.top.crystallize_description') %>
           </p>
         </div>
       </div>
@@ -57,11 +57,11 @@
       <div class="bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition duration-300 overflow-hidden group">
         <div class="p-6 sm:p-8">
           <div class="mb-5 flex justify-center">
-            <%= image_tag "storming_idea.png", alt: "ブレインストーミング", class: "h-40 object-contain transform group-hover:scale-105 transition duration-300" %>
+            <%= image_tag "storming_idea.png", alt: t('home.top.brainstorming'), class: "h-40 object-contain transform group-hover:scale-105 transition duration-300" %>
           </div>
-          <h3 class="text-xl font-semibold text-gray-800 mb-3 text-center">思考を視覚的に解放する</h3>
+          <h3 class="text-xl font-semibold text-gray-800 mb-3 text-center"><%= t('home.top.visualize_thoughts') %></h3>
           <p class="text-gray-600 leading-relaxed text-center">
-            マインドマップやダイアグラムを活用して、複雑な考えを整理します
+            <%= t('home.top.visualize_description') %>
           </p>
         </div>
       </div>
@@ -69,11 +69,11 @@
       <div class="bg-white border border-gray-200 rounded-xl shadow-sm hover:shadow-md transition duration-300 overflow-hidden group">
         <div class="p-6 sm:p-8">
           <div class="mb-5 flex justify-center">
-            <%= image_tag "discarded_idea.png", alt: "整理されたアイデア", class: "h-40 object-contain transform group-hover:scale-105 transition duration-300" %>
+            <%= image_tag "discarded_idea.png", alt: t('home.top.organized_ideas'), class: "h-40 object-contain transform group-hover:scale-105 transition duration-300" %>
           </div>
-          <h3 class="text-xl font-semibold text-gray-800 mb-3 text-center">創造の余白を生み出す</h3>
+          <h3 class="text-xl font-semibold text-gray-800 mb-3 text-center"><%= t('home.top.create_margin') %></h3>
           <p class="text-gray-600 leading-relaxed text-center">
-            不要なアイデアを整理し、本当に価値のある思考に集中できる環境を作ります
+            <%= t('home.top.create_margin_description') %>
           </p>
         </div>
       </div>
