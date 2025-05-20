@@ -10,14 +10,14 @@ ja:
         provider: "プロバイダー"
         uid: "UID"
       category:
-        title: "タイトル"
-        body: "内容"
+        title: "カテゴリ名"
+        body: "詳細"
         status: "ステータス"
         status/normal: "通常"
         status/disabled: "無効"
       idea:
-        title: "タイトル"
-        body: "内容"
+        title: "アイデア名"
+        body: "詳細"
         idea_kbn: "アイデア区分"
         sort: "並び順"
         rank: "ランク"
@@ -30,7 +30,7 @@ ja:
         status/adopted: "採用"
     errors:
       messages:
-        blank: "入力してください"
+        blank: "必須項目です"
         too_long: "%{count}文字以内で入力してください"
         not_a_number: "数値で入力してください"
   enums:

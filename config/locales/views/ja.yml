@@ -5,11 +5,11 @@ ja:
         unauthenticated : "ログインが必要です"
     omniauth_callbacks:
       success: "ログインしました"
-  
+
   layouts:
     application:
-      title: "Myapp"
-  
+      title: "IdeaStorage"
+
   shared:
     header:
       top: "TOP"
@@ -22,7 +22,7 @@ ja:
       error: "エラー"
       info: "情報"
       warning: "警告"
-  
+
   home:
     top:
       slogan_1: "思考をカタチに。"
@@ -40,7 +40,7 @@ ja:
       organized_ideas: "整理されたアイデア"
       create_margin: "創造の余白を生み出す"
       create_margin_description: "不要なアイデアを整理し、本当に価値のある思考に集中できる環境を作ります"
-  
+
   categories:
     index:
       title: "カテゴリ一覧"
@@ -62,7 +62,7 @@ ja:
       title: "カテゴリ修正"
     new:
       title: "カテゴリ登録"
-  
+
   ideas:
     index:
       title: "アイデア一覧"

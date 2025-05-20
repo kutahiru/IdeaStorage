@@ -6,8 +6,8 @@ class Category < ApplicationRecord
   belongs_to :user
   has_many :ideas
 
-  validates :title, presence: true, length: { maximum: 50, message: "50文字以内で入力してください" }
-  validates :body, length: { maximum: 1000, message: "1000文字以内で入力してください" }
+  validates :title, presence: true, length: { maximum: 50 }
+  validates :body, length: { maximum: 500 }
 
   def self.ransackable_attributes(auth_object = nil)
     %w[title body]
