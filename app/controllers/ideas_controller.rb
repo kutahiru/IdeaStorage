@@ -1,6 +1,7 @@
 class IdeasController < ApplicationController
   before_action :authorize_idea_edit, only: %i[edit update destroy]
   def index
+    @category = current_user.categories.find(params[:category_id])
     @q = current_user.category_ideas(params[:category_id]).ransack(params[:q])
     @ideas = if @q.present?
       @q.result.page(params[:page]).per(10)
