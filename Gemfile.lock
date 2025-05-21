@@ -153,7 +153,7 @@ GEM
       activerecord
       kaminari-core (= 1.2.2)
     kaminari-core (1.2.2)
-    language_server-protocol (3.17.0.4)
+    language_server-protocol (3.17.0.5)
     lint_roller (1.1.0)
     logger (1.7.0)
     loofah (2.24.0)
@@ -295,7 +295,7 @@ GEM
       activerecord (>= 6.1.5)
       activesupport (>= 6.1.5)
       i18n
-    rbs (3.9.3)
+    rbs (3.9.4)
       logger
     rdoc (6.13.1)
       psych (>= 4.0.0)
@@ -334,7 +334,7 @@ GEM
       rubocop (>= 1.72)
       rubocop-performance (>= 1.24)
       rubocop-rails (>= 2.30)
-    ruby-lsp (0.23.17)
+    ruby-lsp (0.23.21)
       language_server-protocol (~> 3.17.0)
       prism (>= 1.2, < 2.0)
       rbs (>= 3, < 4)
@@ -351,7 +351,7 @@ GEM
     snaky_hash (2.0.1)
       hashie
       version_gem (~> 1.1, >= 1.1.1)
-    sorbet-runtime (0.5.12087)
+    sorbet-runtime (0.5.12119)
     sprockets (4.2.2)
       concurrent-ruby (~> 1.0)
       logger
