@@ -1,5 +1,5 @@
 class Category < ApplicationRecord
-  enum status: {
+  enum :status, {
     normal: "0", # 通常
     disabled: "1" # 無効
   }

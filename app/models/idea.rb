@@ -1,12 +1,12 @@
 class Idea < ApplicationRecord
   belongs_to :category
 
-  enum rank: {
+  enum :rank, {
     low: "0",
     medium: "1",
     high: "2"
   }
-  enum status: {
+  enum :status, {
     normal: "0", # 通常
     disabled: "1", # 無効
     adopted: "2" # 採用
