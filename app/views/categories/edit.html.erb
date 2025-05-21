@@ -1,0 +1,5 @@
+<% content_for(:title, t('.title')) %>
+<section class="container px-4 mx-auto">
+  <h2 class="mt-6 text-lg font-semibold text-gray-700 capitalize"><%= t('categories.edit.title') %></h2>
+  <%= render "form", category: @category %>
+</section>

@@ -1,0 +1,39 @@
+@import "tailwindcss";
+
+/* Animistaによる wobble-hor-bottom アニメーション */
+@layer utilities {
+  .animate-wobble-hor-bottom {
+    animation-name: wobble-hor-bottom;
+    animation-duration: 4.8s;  /* 全体の時間：0.8秒のアニメーション + 4秒の休止 */
+    animation-timing-function: ease;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+  }
+}
+
+@keyframes wobble-hor-bottom {
+  /* アニメーションは最初の0.8秒（全体の約28.57%）で発生 */
+  0% {
+    transform: translateX(0%);
+    transform-origin: 50% 50%;
+  }
+  5% {
+    transform: translateX(-7px) rotate(-6deg);
+  }
+  8% {
+    transform: translateX(3px) rotate(6deg);
+  }
+  12% {
+    transform: translateX(-3px) rotate(-3.6deg);
+  }
+  17% {
+    transform: translateX(2px) rotate(2.4deg);
+  }
+  21% {
+    transform: translateX(-2px) rotate(-1.2deg);
+  }
+  28%, 100% { /* アニメーション部分の終了（0.8秒時点）から100%まで変化なし */
+    transform: translateX(0%);
+    transform-origin: 50% 50%;
+  }
+}
