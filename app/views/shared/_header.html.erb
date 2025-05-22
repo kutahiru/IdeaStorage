@@ -1,5 +1,5 @@
-<header class="bg-white dark:bg-gray-900">
-  <nav x-data="{ isOpen: false }"  class="border-b dark:border-gray-700">
+<header class="bg-white">
+  <nav x-data="{ isOpen: false }"  class="border-b">
     <div class="container px-6 py-6 mx-auto lg:flex lg:justify-between lg:items-center">
       <div class="flex items-center justify-between">
         <%= link_to root_path, class: "block flex font-medium text-gray-700 lg:mx-4 hover:text-gray-900 hover:underline hover:scale-105" do %>
@@ -18,7 +18,7 @@
         </div>
       </div>
 
-      <div x-cloak :class="[isOpen ? 'translate-x-0 opacity-100 ' : 'opacity-0 -translate-x-full']" class="absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-white shadow-md lg:bg-transparent lg:dark:bg-transparent lg:shadow-none lg:mt-0 lg:p-0 lg:top-0 lg:relative lg:w-auto lg:opacity-100 lg:translate-x-0 lg:flex lg:items-center">
+      <div x-cloak :class="[isOpen ? 'translate-x-0 opacity-100 ' : 'opacity-0 -translate-x-full']" class="absolute inset-x-0 z-20 w-full px-6 py-4 transition-all duration-300 ease-in-out bg-white shadow-md lg:bg-transparent lg:shadow-none lg:mt-0 lg:p-0 lg:top-0 lg:relative lg:w-auto lg:opacity-100 lg:translate-x-0 lg:flex lg:items-center">
         <div class="flex flex-col space-y-4 lg:flex-row lg:items-center lg:space-y-0 lg:-px-8">
           <%= link_to t('shared.header.top'), root_path, class: "block font-medium text-gray-700 lg:mx-4 hover:text-gray-900 hover:underline" %>
           <%= link_to t('shared.header.categories_index'), categories_path, class: "block font-medium text-gray-700 lg:mx-4 hover:text-gray-900 hover:underline" %>
